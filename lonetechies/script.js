@@ -10,10 +10,74 @@ AOS.init({
 const navbar = document.querySelector('.navbar');
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
-const termsOverlay = document.getElementById('terms-overlay');
-const acceptTerms = document.getElementById('accept-terms');
-const declineTerms = document.getElementById('decline-terms');
 const body = document.body;
+
+// Create and append modal
+function createTOSModal() {
+    const modalHTML = `
+        <div class="modal-overlay" id="tosModal">
+            <div class="modal-content">
+                <h2>Terms of Service Agreement</h2>
+                <p>Before using our website, please read and accept our <a href="tos.html" target="_blank">Terms of Service</a>.</p>
+                <div class="modal-buttons">
+                    <button class="modal-button accept-button">Accept</button>
+                    <button class="modal-button decline-button">Decline</button>
+                </div>
+            </div>
+        </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+}
+
+// TOS Modal Handler
+function handleTOSModal() {
+    const modal = document.getElementById('tosModal');
+    if (!modal) {
+        console.log('Creating modal...');
+        createTOSModal();
+    }
+
+    const modal2 = document.getElementById('tosModal');
+    const acceptButton = modal2.querySelector('.accept-button');
+    const declineButton = modal2.querySelector('.decline-button');
+
+    console.log('Modal found:', modal2);
+
+    // Show modal with a slight delay
+    setTimeout(() => {
+        console.log('Showing modal');
+        modal2.style.display = 'flex';
+        // Add show class after a brief moment to trigger animation
+        requestAnimationFrame(() => {
+            modal2.classList.add('show');
+        });
+    }, 1000);
+
+    // Handle accept click
+    acceptButton.addEventListener('click', () => {
+        console.log('TOS accepted');
+        modal2.classList.remove('show');
+        setTimeout(() => {
+            modal2.style.display = 'none';
+        }, 300);
+    });
+
+    // Handle decline click
+    declineButton.addEventListener('click', () => {
+        console.log('TOS declined');
+        window.location.href = 'https://www.google.com';
+    });
+
+    // Close modal when clicking outside
+    modal2.addEventListener('click', (e) => {
+        if (e.target === modal2) {
+            modal2.classList.remove('show');
+            setTimeout(() => {
+                modal2.style.display = 'none';
+            }, 300);
+        }
+    });
+}
 
 // Navbar Scroll Effect
 let lastScrollTop = 0;
@@ -115,15 +179,6 @@ faqItems.forEach(item => {
             answer.style.maxHeight = null;
         }
     });
-
-    // Handle touch events
-    question.addEventListener('touchstart', function(e) {
-        this.classList.add('touch-active');
-    }, { passive: true });
-
-    question.addEventListener('touchend', function(e) {
-        this.classList.remove('touch-active');
-    }, { passive: true });
 });
 
 // Disable hover effects on touch devices
@@ -132,7 +187,6 @@ function updateTouchCapability() {
         document.documentElement.classList.add('touch-device');
     }
 }
-updateTouchCapability();
 
 // Handle service card interactions
 const serviceCards = document.querySelectorAll('.service-card');
@@ -151,128 +205,12 @@ function setMobileViewportHeight() {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
-setMobileViewportHeight();
-window.addEventListener('resize', setMobileViewportHeight);
 
-// Handle form submissions on mobile
-const forms = document.querySelectorAll('form');
-forms.forEach(form => {
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const submitButton = this.querySelector('[type="submit"]');
-        if (submitButton) {
-            submitButton.disabled = true;
-            submitButton.classList.add('loading');
-        }
-        // Add your form submission logic here
-        setTimeout(() => {
-            if (submitButton) {
-                submitButton.disabled = false;
-                submitButton.classList.remove('loading');
-            }
-        }, 2000);
-    });
-});
-
-// Prevent zoom on input focus for iOS
-const inputs = document.querySelectorAll('input, textarea, select');
-inputs.forEach(input => {
-    input.addEventListener('focus', function() {
-        document.documentElement.classList.add('input-focused');
-    });
-    input.addEventListener('blur', function() {
-        document.documentElement.classList.remove('input-focused');
-    });
-});
-
-// Handle scroll performance
-let ticking = false;
-window.addEventListener('scroll', function() {
-    if (!ticking) {
-        window.requestAnimationFrame(function() {
-            // Add your scroll-based animations here
-            ticking = false;
-        });
-        ticking = true;
-    }
-}, { passive: true });
-
-// Particle.js Configuration
-particlesJS('particles-js', {
-    particles: {
-        number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: ['#419D78', '#2D3047', '#E0A458'] },
-        shape: { type: 'circle' },
-        opacity: { value: 0.6, random: false },
-        size: { value: 3, random: true },
-        line_linked: {
-            enable: true,
-            distance: 150,
-            color: '#419D78',
-            opacity: 0.4,
-            width: 1
-        },
-        move: {
-            enable: true,
-            speed: 2,
-            direction: 'none',
-            random: false,
-            straight: false,
-            out_mode: 'out',
-            bounce: false
-        }
-    },
-    interactivity: {
-        detect_on: 'canvas',
-        events: {
-            onhover: { enable: true, mode: 'grab' },
-            onclick: { enable: true, mode: 'push' },
-            resize: true
-        }
-    },
-    retina_detect: true
-});
-
-// Terms of Service Modal
-function showTerms() {
-    termsOverlay.style.display = 'flex';
-}
-
-acceptTerms.addEventListener('click', () => {
-    termsOverlay.style.display = 'none';
-});
-
-declineTerms.addEventListener('click', () => {
-    termsOverlay.style.display = 'none';
-});
-
-// Notification system
-function showNotification(message, type = 'success') {
-    const existingNotification = document.querySelector('.notification');
-    if (existingNotification) {
-        existingNotification.remove();
-    }
-
-    const notification = document.createElement('div');
-    notification.className = `notification ${type}`;
-    notification.textContent = message;
-    document.body.appendChild(notification);
-
-    setTimeout(() => notification.classList.add('show'), 100);
-    setTimeout(() => {
-        notification.classList.remove('show');
-        setTimeout(() => notification.remove(), 300);
-    }, 5000);
-}
-
-// Initialize AOS
-AOS.init({
-    duration: 800,
-    once: true,
-    offset: 100
-});
-
-// Image loading animation
-document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('load', () => img.classList.add('loaded'));
+// Initialize all functionality when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded, initializing TOS modal');
+    handleTOSModal();
+    updateTouchCapability();
+    setMobileViewportHeight();
+    window.addEventListener('resize', setMobileViewportHeight);
 });
