@@ -4,27 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LoneTechies - Professional Website Design Solutions</title>
-    <meta name="description" content="Transform your digital presence with our professional website design services. We craft beautiful, functional websites that drive results.">
+    <meta name="description" content="Transform your digital presence with our professional website design services.">
     <link rel="icon" type="image/svg+xml" href="images/icon-logo-v2.svg">
-    
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Animation Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Particle Background -->
     <div id="particles-js"></div>
 
-    <!-- Navigation -->
     <nav class="navbar glass-morphism">
         <div class="nav-brand">
             <img src="images/icon-logo-v2.svg" alt="LT" class="nav-logo">
@@ -37,22 +27,23 @@
         </div>
         <div class="nav-links">
             <a href="#services">Services</a>
-            <a href="#testimonials">Testimonials</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#process">Process</a>
+            <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
-            <a href="#contact">Contact</a>
+            <a href="#contact" class="cta-button">Contact</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header id="hero" class="hero">
-        <div class="hero-content" data-aos="fade-up">
-            <h1 class="gradient-text">Improve Your Digital Presence</h1>
-            <p class="hero-subtitle">Click on "Consultation" to ask questions or get started with our services.</p>
-            <div class="hero-buttons">
+        <div class="hero-content">
+            <h1 class="gradient-text" data-aos="fade-up">Improve Your Digital Presence</h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Click on "Consultation" to ask questions or get started with our services.</p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
                 <a href="mailto:lonetechies@gmail.com" class="cta-button primary">Consultation</a>
                 <a href="#services" class="cta-button secondary">Learn How We Work</a>
             </div>
-            <div class="hero-stats">
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
                 <div class="stat">
                     <span class="stat-number">100+</span>
                     <span class="stat-label">Projects Completed</span>
@@ -67,306 +58,412 @@
                 </div>
             </div>
         </div>
-        <div class="hero-scroll-indicator">
-            <div class="mouse"></div>
-            <p>Scroll to explore</p>
-        </div>
     </header>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <h2 class="section-title" data-aos="fade-up">Comprehensive Web Solutions</h2>
-        <div class="service-grid">
-            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="service-icon">
-                    <i class="fas fa-pencil-ruler"></i>
-                </div>
-                <h3>UI/UX Design</h3>
-                <p>Creating intuitive, engaging user experiences that keep your visitors coming back.</p>
-                <div class="service-features">
-                    <div class="feature-item">
-                        <i class="fas fa-check"></i>
-                        <div class="feature-content">
-                            <h4>User Research</h4>
-                            <p>Understanding your target audience and their needs</p>
-                        </div>
+    <main>
+        <section id="services" class="services">
+            <h2 class="section-title" data-aos="fade-up">Our Services</h2>
+            <div class="services-grid" data-aos="fade-up">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-check"></i>
-                        <div class="feature-content">
-                            <h4>Wireframing</h4>
-                            <p>Creating the perfect layout structure</p>
-                        </div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites built with modern technologies and best practices.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>Responsive Design</li>
+                        <li><i class="fas fa-check"></i>SEO Optimization</li>
+                        <li><i class="fas fa-check"></i>Performance Focused</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-check"></i>
-                        <div class="feature-content">
-                            <h4>Prototyping</h4>
-                            <p>Interactive mockups for perfect user flow</p>
-                        </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Beautiful and intuitive interfaces that users love to interact with.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>User-Centered Design</li>
+                        <li><i class="fas fa-check"></i>Interactive Prototypes</li>
+                        <li><i class="fas fa-check"></i>Brand Integration</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
+                    <h3>Mobile-First</h3>
+                    <p>Websites optimized for perfect performance on all devices.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>Cross-Platform Testing</li>
+                        <li><i class="fas fa-check"></i>Touch Optimization</li>
+                        <li><i class="fas fa-check"></i>Fast Loading Times</li>
+                    </ul>
                 </div>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="service-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <h3>Web Development</h3>
-                <p>Building robust, scalable websites using cutting-edge technologies.</p>
-                <div class="service-features">
-                    <div class="feature-item">
-                        <i class="fas fa-check"></i>
-                        <div class="feature-content">
-                            <h4>Custom Development</h4>
-                            <p>Tailored solutions for your unique needs</p>
-                        </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-check"></i>
-                        <div class="feature-content">
-                            <h4>E-commerce Solutions</h4>
-                            <p>Secure and scalable online stores</p>
-                        </div>
+                    <h3>Additional Services</h3>
+                    <p>Comprehensive solutions to enhance your web presence.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>Content Management</li>
+                        <li><i class="fas fa-check"></i>Analytics Integration</li>
+                        <li><i class="fas fa-check"></i>Maintenance & Support</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <h2 class="section-title" data-aos="fade-up">Our Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-aos="fade-up">
+                    <h3>SecRoute</h3>
+                    <div class="project-status">Coming Soon</div>
+                    <div class="project-screenshots">
+                        <img src="images/sec1.png" alt="SecRoute Screenshot 1" class="project-image">
+                        <img src="images/sec2.png" alt="SecRoute Screenshot 2" class="project-image">
+                        <img src="images/sec3.png" alt="SecRoute Screenshot 3" class="project-image">
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-check"></i>
-                        <div class="feature-content">
-                            <h4>CMS Integration</h4>
-                            <p>Easy-to-manage content systems</p>
-                        </div>
+                    <p class="project-description">
+                        An advanced cybersecurity router solution designed to enhance online privacy and security. Features include:
+                        <ul class="feature-list">
+                            <li>Dynamic IP address rotation</li>
+                            <li>ISP activity concealment</li>
+                            <li>Local data encryption</li>
+                            <li>Complete online anonymity</li>
+                        </ul>
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Cybersecurity</span>
+                        <span class="tech-tag">Privacy</span>
+                        <span class="tech-tag">Encryption</span>
+                        <span class="tech-tag">Networking</span>
                     </div>
+                    <a href="https://secroute.pages.dev" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> View Project
+                    </a>
                 </div>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="service-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3>Digital Growth</h3>
-                <p>Optimizing your website for maximum visibility and conversion.</p>
-                <div class="service-features">
-                    <div class="feature-item">
-                        <i class="fas fa-check"></i>
-                        <div class="feature-content">
-                            <h4>SEO Optimization</h4>
-                            <p>Improve your search engine rankings</p>
-                        </div>
+                <div class="portfolio-item" data-aos="fade-up">
+                    <h3>DogGejmr</h3>
+                    <div class="project-screenshots">
+                        <img src="images/dog1.png" alt="DogGejmr Screenshot" class="project-image">
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-check"></i>
-                        <div class="feature-content">
-                            <h4>Performance Tuning</h4>
-                            <p>Lightning-fast load times</p>
-                        </div>
+                    <p class="project-description">
+                        A centralized platform that consolidates your social media presence into one cohesive hub. This personal branding site offers:
+                        <ul class="feature-list">
+                            <li>Unified social media management</li>
+                            <li>Enhanced online presence</li>
+                            <li>Personal brand optimization</li>
+                            <li>Streamlined content sharing</li>
+                        </ul>
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Social Media</span>
+                        <span class="tech-tag">Personal Branding</span>
+                        <span class="tech-tag">Content Management</span>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-check"></i>
-                        <div class="feature-content">
-                            <h4>Analytics Setup</h4>
-                            <p>Data-driven insights and tracking</p>
+                    <a href="https://doggejmr.pages.dev" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> View Project
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <h2 class="section-title" data-aos="fade-up">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-item" data-aos="fade-up">
+                    <i class="fas fa-rocket feature-icon"></i>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick turnaround without compromising quality</p>
+                </div>
+                <div class="feature-item" data-aos="fade-up">
+                    <i class="fas fa-lock feature-icon"></i>
+                    <h3>Secure Code</h3>
+                    <p>Built with security best practices</p>
+                </div>
+                <div class="feature-item" data-aos="fade-up">
+                    <i class="fas fa-sync feature-icon"></i>
+                    <h3>Regular Updates</h3>
+                    <p>Continuous improvements and maintenance</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="technologies" class="technologies">
+            <h2 class="section-title" data-aos="fade-up">Technologies We Use</h2>
+            <div class="tech-grid">
+                <div class="tech-item" data-aos="fade-up">
+                    <i class="fab fa-html5 tech-icon"></i>
+                    <h4>HTML5</h4>
+                    <p>Modern markup</p>
+                </div>
+                <div class="tech-item" data-aos="fade-up">
+                    <i class="fab fa-css3-alt tech-icon"></i>
+                    <h4>CSS3</h4>
+                    <p>Stylish designs</p>
+                </div>
+                <div class="tech-item" data-aos="fade-up">
+                    <i class="fab fa-js tech-icon"></i>
+                    <h4>JavaScript</h4>
+                    <p>Interactive features</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing">
+            <h2 class="section-title" data-aos="fade-up">Investment Plans</h2>
+            <p class="section-subtitle" data-aos="fade-up">Transparent pricing for your web development needs</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="price">
+                            <span class="amount">€99.99</span>
+                            <span class="period">one-time</span>
                         </div>
+                        <p class="description">Perfect for small businesses starting their online journey</p>
                     </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i><span>Single Page Website</span></li>
+                        <li><i class="fas fa-check"></i><span>Mobile Responsive Design</span></li>
+                        <li><i class="fas fa-check"></i><span>Email Link Integration</span></li>
+                        <li><i class="fas fa-check"></i><span>Basic SEO Setup</span></li>
+                        <li><i class="fas fa-check"></i><span>Social Media Links</span></li>
+                        <li><i class="fas fa-check"></i><span>Unlimited Revisions During Development</span></li>
+                    </ul>
+                    <a href="mailto:lonetechies.info@gmail.com?subject=Starter%20Plan%20Inquiry" class="pricing-cta">Contact Us</a>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <h2 class="section-title" data-aos="fade-up">Why Choose Us</h2>
-        <div class="features-grid">
-            <div class="feature-item" data-aos="fade-up">
-                <div class="feature-icon">
-                    <i class="fas fa-rocket"></i>
-                </div>
-                <h3>Fast Delivery</h3>
-                <p>Quick turnaround without compromising quality</p>
-            </div>
-            <div class="feature-item" data-aos="fade-up">
-                <div class="feature-icon">
-                    <i class="fas fa-lock"></i>
-                </div>
-                <h3>Secure Code</h3>
-                <p>Built with security best practices</p>
-            </div>
-            <div class="feature-item" data-aos="fade-up">
-                <div class="feature-icon">
-                    <i class="fas fa-sync"></i>
-                </div>
-                <h3>Regular Updates</h3>
-                <p>Continuous improvements and maintenance</p>
-            </div>
-        </div>
-    </section>
-    <!-- Technologies Section -->
-    <section id="technologies" class="technologies">
-        <h2 class="section-title" data-aos="fade-up">Technologies We Use</h2>
-        <div class="tech-grid">
-            <div class="tech-item" data-aos="fade-up">
-                <div class="tech-icon">
-                    <i class="fab fa-html5"></i>
-                </div>
-                <h4>HTML5</h4>
-                <p>Modern, semantic markup</p>
-            </div>
-            <div class="tech-item" data-aos="fade-up">
-                <div class="tech-icon">
-                    <i class="fab fa-css3-alt"></i>
-                </div>
-                <h4>CSS3</h4>
-                <p>Advanced animations & styling</p>
-            </div>
-            <div class="tech-item" data-aos="fade-up">
-                <div class="tech-icon">
-                    <i class="fab fa-js"></i>
-                </div>
-                <h4>JavaScript</h4>
-                <p>Interactive functionality</p>
-            </div>
-            <div class="tech-item" data-aos="fade-up">
-                <div class="tech-icon">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <h4>Responsive Design</h4>
-                <p>Mobile-first approach</p>
-            </div>
-            <div class="tech-item" data-aos="fade-up">
-                <div class="tech-icon">
-                    <i class="fas fa-paint-brush"></i>
-                </div>
-                <h4>UI/UX Design</h4>
-                <p>Beautiful user experiences</p>
-            </div>
-            <div class="tech-item" data-aos="fade-up">
-                <div class="tech-icon">
-                    <i class="fas fa-tachometer-alt"></i>
-                </div>
-                <h4>Performance</h4>
-                <p>Speed optimization</p>
-            </div>
-        </div>
-    </section>
-    <!-- Process Section -->
-    <section id="process" class="process">
-        <h2 class="section-title" data-aos="fade-up">Our Process</h2>
-        <div class="process-grid">
-            <div class="process-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="process-icon">
-                    <i class="fas fa-lightbulb"></i>
-                </div>
-                <div class="process-content">
-                    <span class="step-number">01</span>
-                    <h3>Discovery</h3>
-                    <div class="process-details">
-                        <div class="detail-item">
-                            <i class="fas fa-comments"></i>
-                            <span>Initial Consultation</span>
+
+                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-header">
+                        <div class="featured-tag">Most Popular</div>
+                        <h3>Professional</h3>
+                        <div class="price">
+                            <span class="amount">€199.99</span>
+                            <span class="period">one-time</span>
                         </div>
-                        <div class="detail-item">
-                            <i class="fas fa-tasks"></i>
-                            <span>Requirements Gathering</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-chart-pie"></i>
-                            <span>Market Analysis</span>
-                        </div>
+                        <p class="description">Comprehensive solution for growing businesses</p>
                     </div>
-                    <p>We start by understanding your goals, target audience, and project requirements to create a solid foundation.</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i><span>5-Page Website</span></li>
+                        <li><i class="fas fa-check"></i><span>Custom Responsive Design</span></li>
+                        <li><i class="fas fa-check"></i><span>Email Link Integration</span></li>
+                        <li><i class="fas fa-check"></i><span>Complete SEO Package</span></li>
+                        <li><i class="fas fa-check"></i><span>Social Media Integration</span></li>
+                        <li><i class="fas fa-check"></i><span>Custom Animations</span></li>
+                        <li><i class="fas fa-check"></i><span>Unlimited Revisions During Development</span></li>
+                        <li><i class="fas fa-check"></i><span>3 Months Support</span></li>
+                    </ul>
+                    <a href="mailto:lonetechies.info@gmail.com?subject=Professional%20Plan%20Inquiry" class="pricing-cta">Contact Us</a>
+                </div>
+
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">
+                            <span class="amount">Custom</span>
+                            <span class="period">project-based</span>
+                        </div>
+                        <p class="description">Tailored solutions for larger organizations</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i><span>Unlimited Pages</span></li>
+                        <li><i class="fas fa-check"></i><span>Custom Design & Functionality</span></li>
+                        <li><i class="fas fa-check"></i><span>Advanced Features Integration</span></li>
+                        <li><i class="fas fa-check"></i><span>Premium SEO Package</span></li>
+                        <li><i class="fas fa-check"></i><span>Full Social Media Integration</span></li>
+                        <li><i class="fas fa-check"></i><span>Custom Backend Development</span></li>
+                        <li><i class="fas fa-check"></i><span>Priority Support</span></li>
+                        <li><i class="fas fa-check"></i><span>6 Months Support</span></li>
+                    </ul>
+                    <a href="mailto:lonetechies.info@gmail.com?subject=Enterprise%20Plan%20Inquiry" class="pricing-cta">Contact Us</a>
                 </div>
             </div>
 
-            <div class="process-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="process-icon">
-                    <i class="fas fa-pencil-ruler"></i>
+            <div class="pricing-notes" data-aos="fade-up">
+                <div class="note-card">
+                    <i class="fas fa-clock"></i>
+                    <h4>Flexible Payment Plans</h4>
+                    <p>50% upfront, 50% upon completion</p>
                 </div>
-                <div class="process-content">
-                    <span class="step-number">02</span>
-                    <h3>Design</h3>
-                    <div class="process-details">
-                        <div class="detail-item">
-                            <i class="fas fa-palette"></i>
-                            <span>Visual Concepts</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-object-group"></i>
-                            <span>UI/UX Design</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>Responsive Layouts</span>
-                        </div>
-                    </div>
-                    <p>Our design phase focuses on creating beautiful, functional interfaces that engage and delight your users.</p>
+                <div class="note-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Secure Transactions</h4>
+                    <p>Protected by industry-standard encryption</p>
+                </div>
+                <div class="note-card">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Satisfaction Guaranteed</h4>
+                    <p>100% satisfaction or we keep revising</p>
                 </div>
             </div>
+        </section>
 
-            <div class="process-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="process-icon">
-                    <i class="fas fa-code"></i>
+        <section id="process" class="process">
+            <h2 class="section-title" data-aos="fade-up">Our Process</h2>
+            <div class="process-grid">
+                <div class="process-card" data-aos="fade-up" data-aos-delay="100" style="--card-index: 0">
+                    <div class="process-icon-wrapper">
+                        <i class="fas fa-comments process-icon"></i>
+                        <span class="step-number">01</span>
+                    </div>
+                    <h3>Initial Consultation</h3>
+                    <p>We begin with a detailed discussion to understand your:</p>
+                    <ul class="process-list">
+                        <li style="--item-index: 0">Business goals and vision</li>
+                        <li style="--item-index: 1">Target audience needs</li>
+                        <li style="--item-index: 2">Brand identity requirements</li>
+                        <li style="--item-index: 3">Technical specifications</li>
+                    </ul>
                 </div>
-                <div class="process-content">
-                    <span class="step-number">03</span>
+
+                <div class="process-card" data-aos="fade-up" data-aos-delay="200" style="--card-index: 1">
+                    <div class="process-icon-wrapper">
+                        <i class="fas fa-pencil-ruler process-icon"></i>
+                        <span class="step-number">02</span>
+                    </div>
+                    <h3>Design Planning</h3>
+                    <p>We create comprehensive design blueprints including:</p>
+                    <ul class="process-list">
+                        <li style="--item-index: 0">Wireframes and mockups</li>
+                        <li style="--item-index: 1">Color scheme selection</li>
+                        <li style="--item-index: 2">Typography choices</li>
+                        <li style="--item-index: 3">User interface layouts</li>
+                    </ul>
+                </div>
+
+                <div class="process-card" data-aos="fade-up" data-aos-delay="300" style="--card-index: 2">
+                    <div class="process-icon-wrapper">
+                        <i class="fas fa-code process-icon"></i>
+                        <span class="step-number">03</span>
+                    </div>
                     <h3>Development</h3>
-                    <div class="process-details">
-                        <div class="detail-item">
-                            <i class="fas fa-laptop-code"></i>
-                            <span>Clean Coding</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-cogs"></i>
-                            <span>Integration</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Security Focus</span>
-                        </div>
-                    </div>
-                    <p>We transform designs into reality using modern technologies and best development practices.</p>
+                    <p>We bring designs to life with focus on:</p>
+                    <ul class="process-list">
+                        <li style="--item-index: 0">Clean, efficient code</li>
+                        <li style="--item-index: 1">Responsive layouts</li>
+                        <li style="--item-index: 2">Performance optimization</li>
+                        <li style="--item-index: 3">Cross-browser compatibility</li>
+                    </ul>
                 </div>
-            </div>
 
-            <div class="process-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="process-icon">
-                    <i class="fas fa-rocket"></i>
-                </div>
-                <div class="process-content">
-                    <span class="step-number">04</span>
-                    <h3>Launch</h3>
-                    <div class="process-details">
-                        <div class="detail-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Testing</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-server"></i>
-                            <span>Deployment</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-life-ring"></i>
-                            <span>Support</span>
-                        </div>
+                <div class="process-card" data-aos="fade-up" data-aos-delay="400" style="--card-index: 3">
+                    <div class="process-icon-wrapper">
+                        <i class="fas fa-vial process-icon"></i>
+                        <span class="step-number">04</span>
                     </div>
-                    <p>We ensure everything is perfect before launch and provide ongoing support for your success.</p>
+                    <h3>Testing & Refinement</h3>
+                    <p>We ensure quality through rigorous:</p>
+                    <ul class="process-list">
+                        <li style="--item-index: 0">Functionality testing</li>
+                        <li style="--item-index: 1">Performance benchmarking</li>
+                        <li style="--item-index: 2">Mobile responsiveness checks</li>
+                        <li style="--item-index: 3">User experience validation</li>
+                    </ul>
+                </div>
+
+                <div class="process-card" data-aos="fade-up" data-aos-delay="500" style="--card-index: 4">
+                    <div class="process-icon-wrapper">
+                        <i class="fas fa-rocket process-icon"></i>
+                        <span class="step-number">05</span>
+                    </div>
+                    <h3>Launch & Support</h3>
+                    <p>We ensure a smooth deployment with:</p>
+                    <ul class="process-list">
+                        <li style="--item-index: 0">Deployment assistance</li>
+                        <li style="--item-index: 1">Performance monitoring</li>
+                        <li style="--item-index: 2">Post-launch support</li>
+                        <li style="--item-index: 3">Ongoing maintenance</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Footer -->
+        </section>
+
+        <section id="faq" class="faq">
+            <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h3>How long does it take to complete a website?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Typically, a single-page website takes 1-2 weeks, while a multi-page website takes 2-4 weeks. The exact timeline depends on the project complexity and revision rounds.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>Do I need to provide my own content?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you'll need to provide the text content and images for your website. We can guide you on content structure and recommend stock photos if needed.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>What's included in the SEO package?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our SEO package includes meta tags optimization, keyword research, image optimization, responsive design, and proper heading structure to help your site rank better in search engines.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question">
+                        <h3>How does the revision process work?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>During the development phase, you can request unlimited revisions to ensure the website meets your vision. We'll implement changes until you're completely satisfied with the result.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="faq-question">
+                        <h3>Do you provide website hosting?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While we don't provide hosting directly, we can recommend reliable hosting providers and help you set up your website on your chosen platform.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="faq-question">
+                        <h3>What happens after the website is launched?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Depending on your package, you'll receive support for a specified period after launch. During this time, we'll help with any questions or minor adjustments needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
         <div class="footer-container">
-            <div class="footer-section">
-                <div class="footer-brand">
-                    <img src="images/icon-logo-v2.svg" alt="LT" class="footer-logo">
-                    <span class="footer-text">LoneTechies</span>
-                </div>
+            <div class="footer-brand">
+                <img src="images/icon-logo-v2.svg" alt="LT" class="footer-logo">
+                <span>LoneTechies</span>
             </div>
-        </div>
-        <div class="footer-bottom">
             <p>&copy; 2024 LoneTechies. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
